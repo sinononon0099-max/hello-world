@@ -1,0 +1,33 @@
+# ===== 依赖目录（体积大，能重新下载，不提交）=====
+node_modules/
+vendor/
+
+# ===== 环境变量与密钥（绝对不能提交！）=====
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+
+# ===== 编辑器 / IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===== 操作系统文件 =====
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ===== 日志与临时文件 =====
+*.log
+*.tmp
+*.bak
+
+# ===== 构建产物 =====
+dist/
+build/
+out/
+*.exe
