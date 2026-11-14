@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的第一个网页 | Sinononon0099-MAX</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei",
+                   "PingFang SC", "Hiragino Sans GB", sans-serif;
+      background: linear-gradient(135deg, #1f2937 0%, #111827 55%, #0b1220 100%);
+      color: #e5e7eb;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px 40px;
+    }
+    .wrap { width: 100%; max-width: 760px; }
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: #6ee7b7;
+      border: 1px solid rgba(110, 231, 183, .35);
+      border-radius: 999px;
+      padding: 6px 14px;
+      margin-bottom: 22px;
+    }
+    h1 { font-size: 40px; line-height: 1.25; margin-bottom: 16px; }
+    h1 span { color: #6ee7b7; }
+    .lead { font-size: 17px; line-height: 1.8; color: #9ca3af; margin-bottom: 36px; }
+    .lead code {
+      background: rgba(255,255,255,.07);
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-size: 15px;
+      color: #a5b4fc;
+    }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+    .card {
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 14px;
+      padding: 20px;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .card:hover { transform: translateY(-3px); border-color: rgba(110,231,183,.4); }
+    .card .icon { font-size: 24px; margin-bottom: 10px; }
+    .card h3 { font-size: 15px; margin-bottom: 8px; color: #f3f4f6; }
+    .card p { font-size: 13px; line-height: 1.7; color: #9ca3af; }
+    .timeline { margin-top: 44px; }
+    .timeline h2 { font-size: 15px; letter-spacing: 2px; color: #d1d5db; margin-bottom: 18px; }
+    .timeline ul { list-style: none; border-left: 2px solid rgba(110,231,183,.3); padding-left: 22px; }
+    .timeline li { position: relative; padding: 0 0 16px; font-size: 14px; color: #9ca3af; line-height: 1.7; }
+    .timeline li::before {
+      content: "";
+      position: absolute; left: -29px; top: 7px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: #6ee7b7;
+      box-shadow: 0 0 0 3px rgba(110,231,183,.15);
+    }
+    .links { margin-top: 42px; display: flex; gap: 14px; flex-wrap: wrap; }
+    a.btn {
+      color: #0b1220;
+      background: #6ee7b7;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 11px 20px;
+      border-radius: 10px;
+      transition: opacity .2s ease;
+    }
+    a.btn.ghost {
+      background: transparent;
+      color: #6ee7b7;
+      border: 1px solid rgba(110,231,183,.45);
+    }
+    a.btn:hover { opacity: .85; }
+    footer { margin-top: 56px; font-size: 12px; color: #6b7280; text-align: center; line-height: 1.9; }
+    footer a { color: #9ca3af; }
+    @media (max-width: 480px) { h1 { font-size: 30px; } body { padding-top: 40px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="badge">GITHUB PAGES</div>
+    <h1>嗨，我是 <span>Sinononon0099-MAX</span> 👋</h1>
+    <p class="lead">
+      这是我用 <code>GitHub Pages</code> 部署的第一个网页 —— 从零开始学 Git 的第 1 天，
+      没买服务器、没花一分钱，代码推送上去它就自己上线了。
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📦</div>
+        <h3>仓库</h3>
+        <p><code>hello-world</code><br>所有代码和历史都放在这个仓库里。</p>
+      </div>
+      <div class="card">
+        <div class="icon">🎓</div>
+        <h3>学到的</h3>
+        <p>Git 提交 / 分支 / Pull Request<br>GitHub Pages 部署</p>
+      </div>
+      <div class="card">
+        <div class="icon">🛠️</div>
+        <h3>工具</h3>
+        <p>Git 2.56 · VS Code<br>Windows · SSH 免密推送</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <h2>学习时间线</h2>
+      <ul>
+        <li>注册 GitHub 账号，创建第一个仓库 <strong>hello-world</strong></li>
+        <li>安装 Git，配置用户名和邮箱</li>
+        <li>生成 SSH 密钥，第一次 <code>clone</code> 仓库到本地</li>
+        <li>完成第一次 <code>commit</code> 并 <code>push</code> 到 GitHub</li>
+        <li>开分支、提第一个 Pull Request（正在路上）</li>
+        <li>用 GitHub Pages 让这个页面有了自己的网址 🚀</li>
+      </ul>
+    </div>
+
+    <div class="links">
+      <a class="btn" href="https://github.com/sinononon0099-max/hello-world">查看仓库</a>
+      <a class="btn ghost" href="https://github.com/sinononon0099-max">我的 GitHub 主页</a>
+    </div>
+
+    <footer>
+      Hosted on GitHub Pages · 域名免费，续期靠 <code>git push</code><br>
+      页面源码：<a href="https://github.com/sinononon0099-max/hello-world/blob/main/docs/index.html">docs/index.html</a>
+    </footer>
+  </div>
+</body>
+</html>
